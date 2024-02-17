@@ -27,6 +27,8 @@ Gem::Specification.new do |spec|
         f.start_with?(*%w[bin/ test/ spec/ features/ .git appveyor Gemfile])
     end
   end
+  spec.files = Dir["lib/**/*", "lib/generators/rubabase/install/templates/rubabase_initializer.rb.tt"]
+
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]

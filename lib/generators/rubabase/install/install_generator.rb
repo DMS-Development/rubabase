@@ -2,7 +2,7 @@ require "rails/generators"
 
 module Rubabase
   class InstallGenerator < Rails::Generators::Base
-    source_root File.expand_path("templates", __dir__)
+    source_root File.expand_path('templates', __dir__)
     def insert_supabase_configuration
       config_path = Rails.root.join("config", "storage.yml")
 
@@ -25,7 +25,6 @@ module Rubabase
 
     def create_initializer_file
       template 'rubabase_initializer.rb.tt', 'config/initializers/rubabase.rb'
-      say "Initializer created at config/initializers/rubabase.rb", :green
     end
 
     private
@@ -67,6 +66,7 @@ module Rubabase
                      public_key: YOUR_SUPABASE_PUBLIC_KEY
                      service_key: YOUR_SUPABASE_SERVICE_KEY
                      bucket_name: YOUR_SUPABASE_BUCKET_NAME
+                     bucket_private: true # or false
 
                 3. Save and close the file. Now your credentials are saved securely and can be used by the 
 application. You can start coding 😘

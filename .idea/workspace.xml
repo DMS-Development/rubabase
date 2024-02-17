@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a6f0478-cd3c-4df5-be8f-bded29e37b76" name="Changes" comment="Finished basic implementation of methods from ActiveStorage::Service. Gem should be capable of working fully with ActiveStorage now. No error handling yet so be careful.">
-      <change afterPath="$PROJECT_DIR$/lib/generators/rubabase/templates/RubabaseInitializer.rb.tt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/rubabase/configuration.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="5a6f0478-cd3c-4df5-be8f-bded29e37b76" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generators/rubabase/install/install_generator.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generators/rubabase/install/install_generator.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/rubabase.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rubabase.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generators/rubabase/templates/RubabaseInitializer.rb.tt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generators/rubabase/install/templates/rubabase_initializer.rb.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rubabase/blob_object.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rubabase/blob_object.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rubabase/bucket.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rubabase/bucket.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/rubabase/client.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rubabase/client.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rubabase/configuration.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rubabase/configuration.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/rubabase/storage.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rubabase/storage.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rubabase.gemspec" beforeDir="false" afterPath="$PROJECT_DIR$/rubabase.gemspec" afterDir="false" />
     </list>
@@ -145,7 +144,7 @@
       <workItem from="1707991798244" duration="72000" />
       <workItem from="1707991883379" duration="24923000" />
       <workItem from="1708122767612" duration="6063000" />
-      <workItem from="1708128866553" duration="13205000" />
+      <workItem from="1708128866553" duration="19416000" />
     </task>
     <task id="LOCAL-00001" summary="Project initialization commit.">
       <option name="closed" value="true" />
@@ -171,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708137258736</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated .gitignore for *.gem.&#10;&#10;Created configuration.rb and added an initializer to allow for singleton instance of Supabase client.&#10;&#10;Created initializer template.">
+      <option name="closed" value="true" />
+      <created>1708146334953</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708146334953</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +189,8 @@
     <MESSAGE value="Project initialization commit." />
     <MESSAGE value="Implemented initial project setup.&#10;&#10;Created a basic implementation of an instantiatable Supabase client that will have access to all API endpoints. - blob_object.rb, client.rb, bucket.rb, storage.rb&#10;&#10;Created a basic integration with ActiveStorage to allow for users to use these common methods with their objects in good ol' rails fashion (; - supabase_storage_service.rb&#10;`&#10;• upload&#10;• download&#10;• delete&#10;• delete_prefixed&#10;• exist?&#10;• url&#10;`&#10;&#10;Created a generator that users can run to automatically set up their storage.yml file to work with Supabase, users just have to set up their credentials within encrypted credentials and it will be good to go.&#10;&#10;Added rails and rest-client dependencies." />
     <MESSAGE value="Finished basic implementation of methods from ActiveStorage::Service. Gem should be capable of working fully with ActiveStorage now. No error handling yet so be careful." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished basic implementation of methods from ActiveStorage::Service. Gem should be capable of working fully with ActiveStorage now. No error handling yet so be careful." />
+    <MESSAGE value="Updated .gitignore for *.gem.&#10;&#10;Created configuration.rb and added an initializer to allow for singleton instance of Supabase client.&#10;&#10;Created initializer template." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated .gitignore for *.gem.&#10;&#10;Created configuration.rb and added an initializer to allow for singleton instance of Supabase client.&#10;&#10;Created initializer template." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

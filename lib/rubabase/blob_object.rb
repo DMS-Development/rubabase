@@ -1,8 +1,8 @@
 module Rubabase
   class BlobObject
-    def initialize(client, bucket_name, object_key)
+    def initialize(client: Rubabase::Client.instance, bucket_name: nil, object_key:)
       @client = client
-      @bucket_name = bucket_name
+      @bucket_name = bucket_name || client.configuration.bucket_name
       @object_key = object_key
     end
 

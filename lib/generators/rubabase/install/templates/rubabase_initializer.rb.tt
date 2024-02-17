@@ -4,4 +4,6 @@ Rubabase::Client.configure do |config|
     config.project_url = Rails.application.credentials.dig(:supabase, :url)
     config.public_key = Rails.application.credentials.dig(:supabase, :public_key)
     config.service_key = Rails.application.credentials.dig(:supabase, :service_key)
+    config.bucket_name = Rails.application.credentials.dig(:supabase, :bucket_name)
+    config.bucket_private = Rails.application.credentials.dig(:supabase, :bucket_private)
 end
