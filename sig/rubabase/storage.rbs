@@ -1,0 +1,5 @@
+module Rubabase
+  class Storage
+    @client: untyped
+  end
+end
