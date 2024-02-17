@@ -25,6 +25,17 @@ class ActiveStorage::Service::SupabaseStorageService < ActiveStorage::Service
     execute_request(:get, url)
   end
 
+  def download_chunk(key, range)
+    content = download(key)
+    content[range]
+  end
+
+  def compose(source_keys, destination_key)
+    combined_content = source_keys.map { |key| download(key) + "\n" }.join
+
+    upload(destination_key, StringIO.new(combined_content))
+  end
+
   def delete(key)
     url = "#{@url}/storage/v1/object/#{@bucket_name}/#{key}"
 
@@ -45,20 +56,30 @@ class ActiveStorage::Service::SupabaseStorageService < ActiveStorage::Service
 
   def url(key, **options)
     if @public
-      "#{@url}/storage/v1/object/public/#{@bucket_name}/#{key}"
+      public_url(key, **options)
     else
-      url = "#{@url}/storage/v1/object/sign/#{@bucket_name}/#{key}"
-
-      execute_request(:post, url, payload: options)
+      private_url(key, **options)
     end
   end
 
-  def execute_request(method, url, payload: {}, headers: {}, is_file_upload: false)
+  def url_for_direct_upload(key)
+    url = "#{@url}/storage/v1/object/upload/sign/#{@bucket_name}/#{key}"
+
+    response = execute_request(:post, url, force_auth_header: true)
+
+    "#{@url}#{response["url"]}"
+  end
+
+  def custom_metadata_headers(metadata)
+    {}
+  end
+
+  def execute_request(method, url, payload: {}, headers: {}, is_file_upload: false, force_auth_header: false)
     default_headers = {
       'Content-Type': "application/json"
     }
 
-    default_headers["Authorization"] = "Bearer #{@service_key}" unless @public
+    default_headers["Authorization"] = "Bearer #{@service_key}" unless @public && !force_auth_header
 
     if is_file_upload
       default_headers["Content-Type"] = "multipart/form-data"
@@ -77,6 +98,17 @@ class ActiveStorage::Service::SupabaseStorageService < ActiveStorage::Service
       )
     end
     JSON.parse(response.body)
+  end
+
+  private
+
+  def public_url(key, **)
+    "#{@url}/storage/v1/object/public/#{@bucket_name}/#{key}"
+  end
+
+  def private_url(key, **options)
+    url = "#{@url}/storage/v1/object/sign/#{@bucket_name}/#{key}"
+    execute_request(:post, url, payload: options)
   end
 
 end
