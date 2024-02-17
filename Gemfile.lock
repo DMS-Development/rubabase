@@ -2,6 +2,10 @@ PATH
   remote: .
   specs:
     rubabase (0.1.0)
+      rails
+      rake (~> 13.0)
+      rest-client
+      rspec (~> 3.0)
 
 GEM
   remote: https://rubygems.org/

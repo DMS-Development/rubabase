@@ -11,6 +11,5 @@ module Rubabase
       Bucket.new(@client, bucket_name)
     end
 
-
   end
 end

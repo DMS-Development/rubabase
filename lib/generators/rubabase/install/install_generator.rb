@@ -2,7 +2,8 @@ require "rails/generators"
 
 module Rubabase
   class InstallGenerator < Rails::Generators::Base
-    def insert_commented_supabase_configuration
+    source_root File.expand_path("templates", __dir__)
+    def insert_supabase_configuration
       config_path = Rails.root.join("config", "storage.yml")
 
       if File.exist?(config_path)
@@ -20,6 +21,11 @@ module Rubabase
       else
         say "Couldn't find config/storage.yml.", :red
       end
+    end
+
+    def create_initializer_file
+      template 'rubabase_initializer.rb.tt', 'config/initializers/rubabase.rb'
+      say "Initializer created at config/initializers/rubabase.rb", :green
     end
 
     private
@@ -50,7 +56,7 @@ module Rubabase
     end
 
     def instructions_for_credentials
-      say "\nTo set up these variables in encrypted credentials:", :cyan
+      say "\nTo set up these variables in encrypted credentials for both ActiveStorage and Supabase client functionality:", :cyan
 
       say <<~INSTRUCTIONS, :yellow
                 1. Run `rails credentials:edit` to open the credentials file.
@@ -62,7 +68,8 @@ module Rubabase
                      service_key: YOUR_SUPABASE_SERVICE_KEY
                      bucket_name: YOUR_SUPABASE_BUCKET_NAME
 
-                3. Save and close the file. Now your credentials are saved securely and can be used by the application.
+                3. Save and close the file. Now your credentials are saved securely and can be used by the 
+application. You can start coding 😘
               #{"  "}
               Use actual keys in place of YOUR_SUPABASE_URL, YOUR_SUPABASE_PUBLIC_KEY, YOUR_SUPABASE_SERVICE_KEY and#{' '}
         YOUR_SUPABASE_BUCKET_NAME.\n
