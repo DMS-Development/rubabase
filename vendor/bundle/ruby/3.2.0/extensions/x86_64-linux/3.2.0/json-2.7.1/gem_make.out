@@ -1,0 +1,18 @@
+current directory: /home/spacey/rubabase/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+/usr/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/spacey/rubabase/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240408-20345-ow1qpg sitelibdir\=./.gem.20240408-20345-ow1qpg clean
+rm -fr false  *.bak mkmf.log .*.time
+
+current directory: /home/spacey/rubabase/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240408-20345-ow1qpg sitelibdir\=./.gem.20240408-20345-ow1qpg
+make: Nothing to be done for 'all'.
+
+current directory: /home/spacey/rubabase/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240408-20345-ow1qpg sitelibdir\=./.gem.20240408-20345-ow1qpg install
+
+current directory: /home/spacey/rubabase/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240408-20345-ow1qpg sitelibdir\=./.gem.20240408-20345-ow1qpg clean
+rm -fr false  *.bak mkmf.log .*.time

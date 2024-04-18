@@ -1,0 +1,31 @@
+current directory: /home/spacey/rubabase/vendor/bundle/ruby/3.2.0/gems/date-3.3.4/ext/date
+/usr/bin/ruby extconf.rb
+checking for rb_category_warn()... yes
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /home/spacey/rubabase/vendor/bundle/ruby/3.2.0/gems/date-3.3.4/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20240408-20345-co4slu sitelibdir\=./.gem.20240408-20345-co4slu clean
+rm -f 
+rm -fr date_core.so false date_core.o date_parse.o date_strftime.o date_strptime.o *.bak mkmf.log .*.time
+
+current directory: /home/spacey/rubabase/vendor/bundle/ruby/3.2.0/gems/date-3.3.4/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20240408-20345-co4slu sitelibdir\=./.gem.20240408-20345-co4slu
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_RB_CATEGORY_WARN -DHAVE_TIMEZONE    -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -m64 -o date_core.o -c date_core.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_RB_CATEGORY_WARN -DHAVE_TIMEZONE    -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -m64 -o date_parse.o -c date_parse.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_RB_CATEGORY_WARN -DHAVE_TIMEZONE    -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -m64 -o date_strftime.o -c date_strftime.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_RB_CATEGORY_WARN -DHAVE_TIMEZONE    -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -m64 -o date_strptime.o -c date_strptime.c
+rm -f date_core.so
+gcc -shared -o date_core.so date_core.o date_parse.o date_strftime.o date_strptime.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -Wl,--build-id=sha1 -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -Wl,--build-id=sha1    -m64  -lruby  -lm -lpthread  -lc
+
+current directory: /home/spacey/rubabase/vendor/bundle/ruby/3.2.0/gems/date-3.3.4/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20240408-20345-co4slu sitelibdir\=./.gem.20240408-20345-co4slu install
+/usr/bin/mkdir -p . ./.gem.20240408-20345-co4slu
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 date_core.so ./.gem.20240408-20345-co4slu
+
+current directory: /home/spacey/rubabase/vendor/bundle/ruby/3.2.0/gems/date-3.3.4/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20240408-20345-co4slu sitelibdir\=./.gem.20240408-20345-co4slu clean
+rm -f 
+rm -fr date_core.so false date_core.o date_parse.o date_strftime.o date_strptime.o *.bak mkmf.log .*.time
