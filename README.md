@@ -1,39 +1,29 @@
 # Rubabase
 
-TODO: Delete this and the text below, and describe your gem
+**Status: Active Development** 🚧 - This gem is currently under active development and not yet ready for production use. Features described below are being worked on and may not be fully implemented or available.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rubabase`. To experiment with that code, run `bin/console` for an interactive prompt.
+## 🌟 About Rubabase
 
-## Installation
+Rubabase is a Ruby gem designed to seamlessly integrate Supabase with Rails applications. My goal is to provide Rails developers with a natural, efficient way to use Supabase, leveraging familiar Rails conventions and features such as ActiveStorage and ActiveJob. Rubabase aims to simplify the integration of Supabase services into Rails projects, making it easier and more efficient to develop with.
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+## 🔧 Current Features Under Development
 
-Install the gem and add to the application's Gemfile by executing:
+- **ActiveStorage Support**: Integration with ActiveStorage to enable straightforward interactions with Supabase storage, allowing for easy file uploads, retrievals, and associations using Rails conventions. *- Mostly done* 🌈
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+- **Singleton Client for Supabase Storage API**: A comprehensive singleton client that provides full access to the Supabase Storage API, catering to advanced use cases that require direct interaction with Supabase services.
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+## 🚀 Planned Features
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+- **ActiveJob Integration**: Implementation of pre-made ActiveJob classes to streamline background processing and job queuing within Rails applications, for performance and scalability.
 
-## Usage
+- **Supabase Authentication Support**: Future support for Supabase's authentication API, hoping to simplify the process of implementing user authentication and authorization in Rails applications.
 
-TODO: Write usage instructions here
+## 🛠 Project Status
 
-## Development
+Rubabase is in the early stages of development. I’m actively working on the core features and infrastructure to ensure a solid foundation for the project. I’m *very* committed to making Rubabase a robust, community-driven tool that empowers Rails developers to leverage Supabase in their applications more effectively.
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+## 💡 Getting Involved
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+While Rubabase is not yet ready for production use, I would love to have some community feedback, ideas, and contributions to shape its development. Stay tuned for updates on our progress and how you can contribute in the future.
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rubabase. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/rubabase/blob/main/CODE_OF_CONDUCT.md).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Rubabase project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rubabase/blob/main/CODE_OF_CONDUCT.md).
+Thank you for your interest in Rubabase. I’m excited to work together with the community to build something great! 🌟
