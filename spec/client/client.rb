@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../lib/rubabase/client'
+require_relative '../../lib/rubabase/client'
 
 RSpec.describe Rubabase::Client do
   let(:client) { Rubabase::Client.instance }
