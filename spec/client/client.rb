@@ -3,6 +3,7 @@ require_relative '../../lib/rubabase/client'
 
 RSpec.describe Rubabase::Client do
   let(:client) { Rubabase::Client.instance }
+  let(:config) { Rubabase::Client::Configuration.instance }
 
   describe '#create_bucket' do
     it 'creates a new bucket' do
