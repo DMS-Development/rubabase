@@ -4,9 +4,19 @@ require_relative '../../lib/rubabase/client'
 RSpec.describe Rubabase::Client do
   let(:client) { Rubabase::Client.instance }
 
+  before(:each) do
+    Rubabase::Client.configure do |config|
+      config.project_url = "https://fakeurl.com"
+      config.public_key = "fakepublickey"
+      config.service_key = "fakeservicekey"
+      config.bucket_name = "fakebucketname"
+      config.bucket_private = false
+    end
+  end
+
   describe '#create_bucket' do
     it 'creates a new bucket' do
-      response = client.create_bucket('test_bucket', 123, 2048, ['pdf', 'png'], is_public: false)
+      response = client.create_bucket('test_bucket', 123, 2048, %w[pdf png], is_public: false)
       expect(response).to be_a(Hash)
     end
   end

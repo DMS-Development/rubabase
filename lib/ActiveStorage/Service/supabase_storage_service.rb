@@ -1,4 +1,4 @@
-require "active_storage/service"
+require 'active_storage'
 
 class ActiveStorage::Service::SupabaseStorageService < ActiveStorage::Service
   def initialize(**config)

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "active_storage/storage"
 require "rubabase"
 
 RSpec.configure do |config|

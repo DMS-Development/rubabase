@@ -15,4 +15,3 @@ gem "rest-client"
 
 gem "rails"
 
-gem 'activesupport', '~> 7.0.8'
